@@ -1,0 +1,21 @@
+---
+import ThemeToggle from '../components/ThemeToggle.svelte';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href={Astro.resolve('../styles/theme.css')} />
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
+  </head>
+  <body>
+    <main>
+      <h1>
+        <a href="#">Kyle Durand</a>
+      </h1>
+      <ThemeToggle client:visible />
+    </main>
+  </body>
+</html>

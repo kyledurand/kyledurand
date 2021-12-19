@@ -1,5 +1,7 @@
 ---
 import ThemeToggle from '../components/ThemeToggle.svelte';
+import Parachute from '../components/Parachute.svelte';
+import Index from '../layouts/Index.astro';
 ---
 
 <html lang="en">
@@ -12,10 +14,16 @@ import ThemeToggle from '../components/ThemeToggle.svelte';
   </head>
   <body>
     <main>
-      <h1>
-        <a href="#">Kyle Durand</a>
-      </h1>
-      <ThemeToggle client:visible />
+      <Index>
+        <h1>
+          <a href="/">
+          <Parachute client:visible />
+            <span class="visually-hidden">Kyle Durand</span>
+          </a>
+        </h1>
+        <a href="./about">About</a>
+        <ThemeToggle client:visible />
+      </Index>
     </main>
   </body>
 </html>

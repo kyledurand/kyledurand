@@ -1,0 +1,8 @@
+---
+const {content: {title}} = Astro.props;
+---
+<div>
+  {title && <h2>{title}</h2>}
+  <a href="/">Home</a>
+  <slot />
+</div>

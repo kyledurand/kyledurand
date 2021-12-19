@@ -14,13 +14,10 @@
   --link: #010;
   --selection-text: white;
 
-  --background: #c0c0c0;
-  --selection-background: orange;
-}
+  --highlight: #007265;
 
-body {
-  color: var(--text);
-  background: var(--background);
+  --background: #c5fff6;
+  --selection-background: orange;
 }
 
 :root.theme-dark {
@@ -28,10 +25,7 @@ body {
   --text: #c0c0c0;
   --link: #f1f;
 
-  --background: #000;
-}
+  --highlight: #f2c2ff;
 
-::selection {
-  color: var(--selection-text);
-  background-color: var(--selection-background);
+  --background: #312f2f;
 }

@@ -3,13 +3,10 @@
   import { draw } from "svelte/transition";
 
   const defaultPosition = "-74px";
-  const duration = 400;
-
-  // falling 100ms
-  // deployed 80ms
-  // landed `sum`
+  const duration = 300;
 
   let deployed;
+  // let interim 🤔
   let landed;
   let position = defaultPosition;
 
@@ -30,7 +27,7 @@
 
   function land() {
     setTimeout(() => {
-      landed = true;
+      // landed = true;
       // console.log("land and rotate");
     }, duration);
   }
@@ -90,11 +87,11 @@
 <style>
   .logo {
     overflow: visible;
-    transition: transform 100ms ease-in-out;
+    transition: transform 300ms ease-in;
   }
 
   .parachute {
-    transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in;
   }
 
   .landed {

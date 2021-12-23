@@ -12,6 +12,39 @@ a {
   color: var(--link);
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
+:root {
+  /* Globals */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  /* Radii */
+  --radius-1: 2px;
+  --radius-2: 3px;
+  --radius-3: 4px;
+  --radius-4: 6px;
+  --radius-4: 12px;
+  /* Type */
+  --size-1: 13px;
+  --size-2: 14px;
+  --size-3: 15px;
+  --size-4: 16px;
+}
+
+.plain-button {
+  border: 0;
+  font-size: var(--size-2);
+  padding: var(--space-4);
+  background-color: var(--background-button);
+  border-radius: var(--radius-3);
+  transition: color, background-color, 100ms ease-in-out;
+}
+
 ::selection {
   color: var(--selection-text);
   background-color: var(--selection-background);

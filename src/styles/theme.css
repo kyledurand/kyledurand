@@ -17,6 +17,7 @@
   --highlight: #007265;
 
   --background: #c5fff6;
+  --background-button: #5fbf79;
   --selection-background: orange;
 }
 
@@ -28,4 +29,5 @@
   --highlight: #f2c2ff;
 
   --background: #312f2f;
+  --background-button: #b582c3;
 }

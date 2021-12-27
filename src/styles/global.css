@@ -1,3 +1,6 @@
+@import "./theme.css";
+@import "./button.css";
+
 html,
 body {
   color: var(--text);
@@ -18,7 +21,7 @@ button {
 }
 
 :root {
-  /* Globals */
+  /* Spacing */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -29,20 +32,11 @@ button {
   --radius-3: 4px;
   --radius-4: 6px;
   --radius-4: 12px;
-  /* Type */
+  /* Typo */
   --size-1: 13px;
   --size-2: 14px;
   --size-3: 15px;
   --size-4: 16px;
-}
-
-.plain-button {
-  border: 0;
-  font-size: var(--size-2);
-  padding: var(--space-4);
-  background-color: var(--background-button);
-  border-radius: var(--radius-3);
-  transition: color, background-color, 100ms ease-in-out;
 }
 
 ::selection {

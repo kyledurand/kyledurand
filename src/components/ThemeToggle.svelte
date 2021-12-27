@@ -28,14 +28,14 @@
 <div>
   <button
     type="button"
-    class={`plain-button ${theme === "theme-dark" && "active"}`}
+    class={`button ${theme === "theme-dark" && "active"}`}
     on:click={() => setTheme("theme-dark")}
   >
     🌚
   </button>
   <button
     type="button"
-    class={`plain-button ${theme === "theme-light" && "active"}`}
+    class={`button ${theme === "theme-light" && "active"}`}
     on:click={() => setTheme("theme-light")}
   >
     🌝

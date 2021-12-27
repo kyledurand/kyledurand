@@ -6,19 +6,16 @@
   const duration = 300;
 
   let deployed;
-  // let interim 🤔
   let landed;
   let position = defaultPosition;
 
   onMount(() => {
-    console.log("pre deploy");
     position = "0px";
     deploy();
   });
 
   function deploy() {
     setTimeout(() => {
-      console.log("pre land");
       deployed = true;
       position = "40px";
       land();
@@ -27,8 +24,14 @@
 
   function land() {
     setTimeout(() => {
-      // landed = true;
-      // console.log("land and rotate");
+      position = "71px";
+      rotate();
+    }, duration);
+  }
+
+  function rotate() {
+    setTimeout(() => {
+      landed = true;
     }, duration);
   }
 </script>

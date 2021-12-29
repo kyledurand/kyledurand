@@ -10,6 +10,8 @@
     "deploy": "sh deploy.sh"
   },
   "devDependencies": {
-    "astro": "^0.21.13"
+    "astro": "^0.21.13",
+    "postcss": "^8.4.5",
+    "postcss-nested": "^5.0.6"
   }
 }

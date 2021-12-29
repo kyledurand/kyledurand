@@ -25,7 +25,7 @@
   }
 </script>
 
-<div>
+<div class="button-group">
   <button
     type="button"
     class={`button ${theme === "theme-dark" && "active"}`}

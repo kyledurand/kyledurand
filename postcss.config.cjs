@@ -1,3 +1,11 @@
+const nested = require("postcss-nested");
+const pxToRem = require("postcss-pxtorem");
+
 module.exports = {
-  plugins: [require("postcss-nested")],
+  plugins: [
+    pxToRem({
+      propList: ["*"],
+    }),
+    nested(),
+  ],
 };

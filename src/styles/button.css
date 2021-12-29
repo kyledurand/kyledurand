@@ -1,10 +1,11 @@
 .button {
   border: 0;
   font-size: var(--size-2);
-  padding: var(--space-4);
   background-color: var(--background-button);
   border-radius: var(--radius-3);
   transition: color, background-color, 100ms ease-in-out;
+  min-height: 44px;
+  min-width: 44px;
 
   &:hover {
     background-color: deeppink;
@@ -19,8 +20,12 @@
   }
 }
 
-.button-group > * {
-  margin: 0;
+.button-group {
+  display: flex;
+
+  > * {
+    margin: 0;
+  }
 }
 
 .button-group button:first-child {

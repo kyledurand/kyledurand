@@ -72,14 +72,14 @@
           d="M4.442 19.159c0-8.528 8.019-15.44 17.91-15.44 9.892 0 17.911 6.912 17.911 15.44l-17.91 15.083-17.91-15.083Z"
           stroke-linejoin="round"
           class="parachute"
-          style="transform: translateY({position}); transition-duration: {duration}"
+          style="transform: translateY({position}); transition-duration: {duration}ms"
         />
       {:else}
         <path
           d="M13 7.44C15.785 5.147 18.755 4 21.91 4c3.155 0 6.126 1.147 8.91 3.44l-8.91 27.084L13 7.44Z"
           stroke-linejoin="round"
           class="parachute"
-          style="transform: translateY({position}); transition-duration: {duration}"
+          style="transform: translateY({position}); transition-duration: {duration}ms"
         />
       {/if}
       <path d="M4.045 111.95h35.91" />
@@ -94,7 +94,7 @@
   }
 
   .parachute {
-    transition: transform 300ms ease-in;
+    transition-property: transform;
   }
 
   .landed {

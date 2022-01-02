@@ -1,6 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  import { draw } from "svelte/transition";
+  import {onMount} from "svelte";
+  import {draw} from "svelte/transition";
 
   const defaultPosition = "-74px";
   const duration = 300;
@@ -51,11 +51,11 @@
       stroke-linecap="round"
     >
       <path
-        in:draw={{ duration }}
+        in:draw={{duration}}
         d="M4 19.44C4 10.913 12.019 4 21.91 4c9.892 0 17.91 6.913 17.91 15.44L21.91 34.524 4 19.44Z"
         stroke-linejoin="round"
       />
-      <path in:draw={{ duration }} d="M4.045 45.95h35.91" />
+      <path in:draw={{duration}} d="M4.045 45.95h35.91" />
     </g>
   </svg>
 {:else}
@@ -95,6 +95,7 @@
 
   .parachute {
     transition-property: transform;
+    transition-timing-function: ease-in;
   }
 
   .landed {

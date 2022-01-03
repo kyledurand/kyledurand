@@ -1,7 +1,6 @@
 ---
 import ThemeToggle from '../components/ThemeToggle.svelte';
 import Parachute from '../components/Parachute.svelte';
-import Index from '../layouts/Index.astro';
 ---
 
 <html lang="en">
@@ -13,15 +12,17 @@ import Index from '../layouts/Index.astro';
   </head>
   <body>
     <main>
-      <Index>
-        <h1>
-          <a href="/">
-            <Parachute client:visible />
-            <span class="visually-hidden">Hello I'm Kyle Durand</span>
-          </a>
-        </h1>
-        <ThemeToggle client:visible />
-      </Index>
+      <h1>
+        <Parachute client:visible />
+        <span class="visually-hidden">Hello I'm Kyle Durand</span>
+      </h1>
+      <ThemeToggle client:visible />
     </main>
   </body>
 </html>
+
+<style>
+  body {
+    padding: 16px;
+  }
+</style>

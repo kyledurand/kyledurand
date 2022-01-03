@@ -4,8 +4,6 @@
   let theme = "theme-light";
 
   onMount(() => {
-    if (import.meta.env.SSR) return;
-
     const root = document.documentElement;
 
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -25,19 +23,12 @@
   }
 </script>
 
-<div class="button-group">
-  <button
-    type="button"
-    class={`button ${theme === "theme-dark" && "active"}`}
-    on:click={() => setTheme("theme-dark")}
-  >
+{#if theme === "theme-light"}
+  <button type="button" class="button" on:click={() => setTheme("theme-dark")}>
     🌚
   </button>
-  <button
-    type="button"
-    class={`button ${theme === "theme-light" && "active"}`}
-    on:click={() => setTheme("theme-light")}
-  >
+{:else}
+  <button type="button" class="button" on:click={() => setTheme("theme-light")}>
     🌝
   </button>
-</div>
+{/if}

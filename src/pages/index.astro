@@ -15,10 +15,17 @@ import Parachute from '../components/Parachute.svelte';
       <Parachute client:visible />
       <h1>👋 Hey I'm Kyle</h1>
       <p>
-        I like writing and teaching code @shopify.
-        I'm currently working on the <a href="https://polaris.shopify.com">Polaris design system</a>.
+        I like writing and teaching code <a href="https://twitter.com/Shopify">@shopify</a>
+        and I'm currently working on the <a href="https://polaris.shopify.com">Polaris design system</a>.
       </p>
       <ThemeToggle client:visible />
     </main>
   </body>
 </html>
+
+<style>
+  main {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+</style>

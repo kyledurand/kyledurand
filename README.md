@@ -1,4 +1,4 @@
-### Hey there 👋 🌊
+### Hey there 👋 🌝
 
 🔭 I’m currently working on Polaris [@shopify](https://github.com/Shopify)
 

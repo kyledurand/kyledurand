@@ -2,7 +2,7 @@
   import {onMount} from "svelte";
 
   const defaultPosition = "-74px";
-  const duration = 300;
+  const duration = 350;
 
   let deployed;
   let landed;
@@ -41,6 +41,7 @@
     height="50"
     xmlns="http://www.w3.org/2000/svg"
     class="logo landed"
+    style="transition-duration: {duration}ms"
   >
     <g
       stroke="var(--highlight)"
@@ -57,7 +58,13 @@
     </g>
   </svg>
 {:else}
-  <svg width="44" height="116" xmlns="http://www.w3.org/2000/svg" class="logo">
+  <svg
+    width="44"
+    height="116"
+    xmlns="http://www.w3.org/2000/svg"
+    class="logo"
+    style="transition-duration: {duration}ms"
+  >
     <g
       stroke="var(--highlight)"
       stroke-width="7"
@@ -88,15 +95,19 @@
 <style>
   .logo {
     overflow: visible;
-    transition: transform 300ms ease-in;
+    transition-property: transform;
+    transition-timing-function: var(--ease-in-2);
+    transform: rotate(0deg);
   }
 
   .parachute {
     transition-property: transform;
-    transition-timing-function: ease-in;
+    transition-timing-function: var(--ease-in-2);
   }
 
   .landed {
     transform: rotate(90deg);
+    transform-origin: 25px;
+    margin-top: 66px;
   }
 </style>

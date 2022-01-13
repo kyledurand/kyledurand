@@ -1,8 +1,10 @@
 ---
 const {content: {title}} = Astro.props;
+
+if (!title) throw new Error('Astro.props.title is undefined');
 ---
 <div>
-  {title && <h2>{title}</h2>}
+  <h1>{title}</h1>
   <a href="/">Home</a>
   <slot />
 </div>

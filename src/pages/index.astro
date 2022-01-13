@@ -12,17 +12,13 @@ import Parachute from '../components/Parachute.svelte';
   </head>
   <body>
     <main>
-      <h1>
-        <Parachute client:visible />
-        <span class="visually-hidden">Hello I'm Kyle Durand</span>
-      </h1>
+      <Parachute client:visible />
+      <h1>👋 Hey I'm Kyle</h1>
+      <p>
+        I like writing and teaching code @shopify.
+        I'm currently working on the <a href="https://polaris.shopify.com">Polaris design system</a>.
+      </p>
       <ThemeToggle client:visible />
     </main>
   </body>
 </html>
-
-<style>
-  body {
-    padding: 16px;
-  }
-</style>

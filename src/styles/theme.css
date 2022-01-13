@@ -1,24 +1,12 @@
 :root {
-  --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  --font-body: system-ui, var(--font-fallback);
-  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
-    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
-    "Courier New", Courier, monospace;
-}
-
-:root {
   color-scheme: light;
   --text: #000;
   --link: #010;
-  --selection-text: white;
 
   --highlight: #007265;
 
   --background: #c5fff6;
   --background-button: #5fbf79;
-  --selection-background: orange;
 }
 
 :root.theme-dark {

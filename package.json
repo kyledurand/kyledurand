@@ -13,6 +13,8 @@
     "astro": "^0.21.13",
     "postcss": "^8.4.5",
     "postcss-nested": "^5.0.6",
-    "postcss-pxtorem": "^6.0.0"
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "2.5.1",
+    "prettier-plugin-astro": "^0.0.11"
   }
 }

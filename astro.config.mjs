@@ -9,7 +9,7 @@
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   buildOptions: {
-    site: "https://kyledurand.github.io/kyledurand/",
+    site: "https://kyledurand.github.io",
   },
   renderers: ["@astrojs/renderer-svelte"],
 });

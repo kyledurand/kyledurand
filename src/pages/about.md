@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/Page.astro
-title: About le moi
+title: About
 ---
 
 ## sup

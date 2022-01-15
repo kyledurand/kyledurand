@@ -1,0 +1,23 @@
+---
+import Metas from "../components/Metas.astro";
+import Navigation from "../components/Navigation.astro";
+import ThemeToggle from "../components/ThemeToggle.svelte";
+---
+
+<html lang="en">
+  <Metas />
+  <body>
+    <main>
+      <Navigation />
+      <slot />
+      <ThemeToggle client:visible />
+    </main>
+  </body>
+</html>
+
+<style>
+  main {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+</style>

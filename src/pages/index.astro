@@ -1,35 +1,15 @@
 ---
-import ThemeToggle from "../components/ThemeToggle.svelte";
+import Frame from "../components/Frame.astro";
 import Parachute from "../components/Parachute.svelte";
-import Navigation from "../components/Navigation.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
-  </head>
-  <body>
-    <main>
-      <Parachute client:visible />
-      <h1>👋 Hey I'm Kyle</h1>
-      <p>
-        I like writing and teaching code
-        <a href="https://twitter.com/Shopify">@shopify</a>
-        and I'm currently working on the
-        <a href="https://polaris.shopify.com">Polaris design system</a>.
-      </p>
-      <ThemeToggle client:visible />
-      <Navigation />
-    </main>
-  </body>
-</html>
-
-<style>
-  main {
-    max-width: 60ch;
-    margin: 0 auto;
-  }
-</style>
+<Frame>
+  <Parachute client:visible />
+  <h1>👋 Hey I'm Kyle</h1>
+  <p>
+    I like writing and teaching code
+    <a href="https://twitter.com/Shopify">@shopify</a>
+    and I'm currently working on the
+    <a href="https://polaris.shopify.com">Polaris design system</a>.
+  </p>
+</Frame>

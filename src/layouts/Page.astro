@@ -1,5 +1,5 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Frame from "../components/Frame.astro";
 
 const {
   content: {title},
@@ -8,8 +8,7 @@ const {
 if (!title) throw new Error("Astro.props.title is undefined");
 ---
 
-<main>
+<Frame>
   <h1>{title}</h1>
   <slot />
-  <Navigation />
-</main>
+</Frame>

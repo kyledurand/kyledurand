@@ -1,11 +1,12 @@
 .button {
+  --button-size: 44px;
   border: 0;
   font-size: var(--size-2);
   background-color: var(--background-button);
   border-radius: var(--radius-3);
   transition: color, background-color, 100ms ease-in-out;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: var(--button-size);
+  min-width: var(--button-size);
 
   &:hover {
     background-color: deeppink;

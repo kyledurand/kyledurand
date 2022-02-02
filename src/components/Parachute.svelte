@@ -2,10 +2,9 @@
   import {onMount} from "svelte";
 
   const defaultPosition = "-74px";
-  const duration = 350;
+  const duration = 500;
 
-  let deployed;
-  let landed;
+  let status;
   let position = defaultPosition;
 
   onMount(() => {
@@ -15,7 +14,7 @@
 
   function deploy() {
     setTimeout(() => {
-      deployed = true;
+      status = "deployed";
       position = "40px";
       land();
     }, duration);
@@ -30,12 +29,12 @@
 
   function rotate() {
     setTimeout(() => {
-      landed = true;
+      status = "landed";
     }, duration);
   }
 </script>
 
-{#if landed}
+{#if status === "landed"}
   <svg
     width="44"
     height="50"
@@ -72,7 +71,7 @@
       fill-rule="evenodd"
       stroke-linecap="round"
     >
-      {#if deployed}
+      {#if status === "deployed"}
         <path
           d="M4.442 19.159c0-8.528 8.019-15.44 17.91-15.44 9.892 0 17.911 6.912 17.911 15.44l-17.91 15.083-17.91-15.083Z"
           stroke-linejoin="round"

@@ -1,19 +1,22 @@
-<nav>
-  <ul>
-    <li><a href="/kyledurand">Home</a></li>
-    <li><a href="/kyledurand/about">About</a></li>
-    <li><a href="/kyledurand/work">Work</a></li>
-    <li><a href="/kyledurand/play">Play</a></li>
-    <li><a href="/kyledurand/travels">Travels</a></li>
-    <li><a href="/kyledurand/contact">Contact</a></li>
-  </ul>
-</nav>
+<ul>
+  <li><a href="/kyledurand">Home</a></li>
+  <li><a href="/kyledurand/about">About</a></li>
+  <li><a href="/kyledurand/work">Work</a></li>
+  <li><a href="/kyledurand/play">Play</a></li>
+  <li><a href="/kyledurand/travels">Travels</a></li>
+  <li><a href="/kyledurand/contact">Contact</a></li>
+</ul>
 
 <style>
   ul {
     display: flex;
+    flex-direction: column;
     gap: var(--space-2);
     list-style: none;
     padding: 0;
+  }
+
+  li {
+    margin: var(--space-1) 0;
   }
 </style>

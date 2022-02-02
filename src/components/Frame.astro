@@ -7,8 +7,10 @@ import ThemeToggle from "../components/ThemeToggle.svelte";
 <html lang="en">
   <Metas />
   <body>
-    <main>
+    <nav>
       <Navigation />
+    </nav>
+    <main>
       <slot />
       <ThemeToggle client:visible />
     </main>
@@ -16,8 +18,18 @@ import ThemeToggle from "../components/ThemeToggle.svelte";
 </html>
 
 <style>
+  body {
+    display: flex;
+    gap: var(--space-4);
+  }
+
   main {
     max-width: 60ch;
     margin: 0 auto;
+  }
+
+  nav {
+    padding-top: 94px;
+    max-width: 300px;
   }
 </style>

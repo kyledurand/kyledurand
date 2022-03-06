@@ -1,7 +1,7 @@
 <script>
   import {onMount} from "svelte";
   let shadow = "-5px 5px 0px white";
-  let text = "You only yolo once";
+  let text = "Jack man";
   let descretion = false;
 
   onMount(() => {
@@ -82,7 +82,7 @@
   </p>
   <div class="form">
     <div class="input">
-      <label for="text">Favourite quote</label>
+      <label for="text">Pop your name in</label>
       <input id="text" type="text" bind:value={text} />
     </div>
     <button on:click={() => (descretion = true)}>Generate</button>

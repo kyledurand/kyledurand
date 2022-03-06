@@ -2,13 +2,10 @@
   import {onMount} from "svelte";
 
   onMount(() => {
+    let nodeDirections = [false, false];
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-
-    if (prefersReducedMotion) return;
-
-    let nodeDirections = [false, false];
     const canvas = document.querySelector(".background");
     const context = canvas.getContext("2d");
     const width = window.innerWidth;
@@ -28,6 +25,8 @@
     context.moveTo(node1Start, 0);
     context.lineTo(node1End, height);
     context.stroke();
+
+    if (prefersReducedMotion) return;
 
     const animation = setInterval(() => {
       raf = window.requestAnimationFrame(animate);

@@ -28,6 +28,7 @@
 
     canvas.width = width;
     canvas.height = height;
+    context.lineCap = "round";
 
     const getNewX = () => Math.floor(Math.random() * width);
     const getNewY = () => Math.floor(Math.random() * height);
@@ -60,7 +61,6 @@
 
       context.strokeStyle = color;
       context.lineWidth = amount;
-      context.lineCap = "round";
       context.moveTo(startX, startY);
       context.lineTo(xDistance, yDistance);
       //context.bezierCurveTo(startX, startY, xDistance, yDistance, 45, 50);

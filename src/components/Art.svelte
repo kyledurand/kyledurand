@@ -60,8 +60,10 @@
 
       context.strokeStyle = color;
       context.lineWidth = amount;
+      context.lineCap = "round";
       context.moveTo(startX, startY);
       context.lineTo(xDistance, yDistance);
+      //context.bezierCurveTo(startX, startY, xDistance, yDistance, 45, 50);
       context.stroke();
 
       if (amount >= 20) {
@@ -74,11 +76,17 @@
 </script>
 
 {#if descretion === false}
+  <h2>Warning</h2>
   <p class="warning">
-    May induce an epileptic seizure in photosensitive individuals.
+    Generating art may induce an epileptic seizure in photosensitive individuals
   </p>
-  <input type="text" bind:value={text} />
-  <button on:click={() => (descretion = true)}>Generate</button>
+  <div class="form">
+    <div class="input">
+      <label for="text">Favourite quote</label>
+      <input id="text" type="text" bind:value={text} />
+    </div>
+    <button on:click={() => (descretion = true)}>Generate</button>
+  </div>
 {/if}
 
 <h1 class="art {descretion}" style="text-shadow: {shadow}">{text}</h1>
@@ -91,6 +99,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  h2 {
+    letter-spacing: 1ch;
+    text-transform: uppercase;
+  }
+
+  .form {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
   }
 
   .canvas {
@@ -111,8 +138,6 @@
     letter-spacing: 1ch;
     padding-left: 1ch;
     color: #010101;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   .art.false {
@@ -124,7 +149,5 @@
     font-size: 1rem;
     letter-spacing: 0.5ch;
     padding-left: 0.5ch;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 </style>

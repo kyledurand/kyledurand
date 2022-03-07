@@ -1,9 +1,9 @@
 <script>
   import {onMount} from "svelte";
-
+  const placeholder = "You only yolo once";
   let shadow = "-5px 5px 0px white";
   let descretion = false;
-  let text;
+  let text = placeholder;
 
   onMount(() => {
     let amount = 0;
@@ -11,8 +11,8 @@
     const bypass = new URLSearchParams(window.location.search).get("bypass");
 
     descretion = bypass || false;
+    text = searchText || placeholder;
 
-    text = searchText;
     const textStyles =
       "color: seagreen;" +
       "background: aquamarine;" +
@@ -28,6 +28,7 @@
     const context = canvas.getContext("2d");
     const width = window.innerWidth;
     const height = window.innerHeight;
+
     let startX = 0;
     let startY = 0;
     let endX = width;
@@ -89,8 +90,8 @@
   </p>
   <form class="form">
     <div class="input">
-      <label for="text">Pop your name in</label>
-      <input id="text" type="text" bind:value={text} />
+      <label for="text">Start with your favourite motivational quote</label>
+      <input id="text" type="text" {placeholder} bind:value={text} />
     </div>
     <button on:click={() => (descretion = true)}>Generate</button>
   </form>

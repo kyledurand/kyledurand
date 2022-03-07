@@ -1,11 +1,18 @@
 <script>
   import {onMount} from "svelte";
+
   let shadow = "-5px 5px 0px white";
-  let text = "Jack man";
   let descretion = false;
+  let text;
 
   onMount(() => {
     let amount = 0;
+    const searchText = new URLSearchParams(window.location.search).get("text");
+    const bypass = new URLSearchParams(window.location.search).get("bypass");
+
+    descretion = bypass || false;
+
+    text = searchText;
     const textStyles =
       "color: seagreen;" +
       "background: aquamarine;" +
@@ -80,13 +87,13 @@
   <p class="warning">
     Generating art may induce an epileptic seizure in photosensitive individuals
   </p>
-  <div class="form">
+  <form class="form">
     <div class="input">
       <label for="text">Pop your name in</label>
       <input id="text" type="text" bind:value={text} />
     </div>
     <button on:click={() => (descretion = true)}>Generate</button>
-  </div>
+  </form>
 {/if}
 
 <h1 class="art {descretion}" style="text-shadow: {shadow}">{text}</h1>

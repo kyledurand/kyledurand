@@ -1,6 +1,6 @@
 <script>
   import {onMount} from "svelte";
-  const placeholder = "You only yolo once";
+  const placeholder = "This is basically a free NFT";
   let shadow = "-5px 5px 0px white";
   let descretion = false;
   let text = placeholder;

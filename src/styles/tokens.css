@@ -4,12 +4,16 @@
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
   /* Radius */
   --radius-1: 2px;
-  --radius-2: 3px;
-  --radius-3: 4px;
-  --radius-4: 6px;
-  --radius-4: 12px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 10px;
+  --radius-6: 12px;
   /* Size */
   --size-1: 13px;
   --size-2: 14px;

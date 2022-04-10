@@ -7,6 +7,7 @@
 
   --background: #c5fff6;
   --background-button: #5fbf79;
+  --background-stroke: rgb(95 191 121 / 0.25);
 }
 
 :root.theme-dark {
@@ -17,5 +18,5 @@
   --highlight: #f2c2ff;
 
   --background: #312f2f;
-  --background-button: #b582c3;
+  --background-stroke: rgb(181 130 195 / 0.2);
 }

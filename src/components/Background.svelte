@@ -1,10 +1,10 @@
 <script>
   import {onMount} from "svelte";
+  const MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
   onMount(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const styles = getComputedStyle(document.body);
+    const prefersReducedMotion = window.matchMedia(MOTION_QUERY).matches;
 
     const canvas = document.querySelector(".background");
     const context = canvas.getContext("2d");
@@ -24,10 +24,9 @@
     let node1End = Math.floor(Math.random() * width);
     let node2Start = Math.floor(Math.random() * height);
     let node2End = Math.floor(Math.random() * height);
-
     canvas.height = height;
     canvas.width = width;
-    context.strokeStyle = "rgb(255 255 255 / 15%)";
+    context.strokeStyle = styles.getPropertyValue("--background-stroke");
     context.lineWidth = 2;
     context.blur = 2;
     // Line 1 start
@@ -41,7 +40,7 @@
 
     const animation = setInterval(() => {
       raf = window.requestAnimationFrame(animate);
-    }, 1000 / 30);
+    }, 1000 / 60);
 
     function animate() {
       // Temp
@@ -53,7 +52,7 @@
       node2Start = nodeDirections[2] ? node2Start - 1 : node2Start + 1;
       node2End = nodeDirections[3] ? node2End - 1 : node2End + 1;
 
-      console.log(nodeDirections);
+      // console.log(nodeDirections);
       context.clearRect(0, 0, width, height);
       context.save();
       context.beginPath();
@@ -119,6 +118,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(1 1 1);
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 </style>

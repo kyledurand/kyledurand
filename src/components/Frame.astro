@@ -2,6 +2,7 @@
 import Metas from "../components/Metas.astro";
 import Navigation from "../components/Navigation.astro";
 import ThemeToggle from "../components/ThemeToggle.svelte";
+import Background from "../components/Background.svelte";
 ---
 
 <html lang="en">
@@ -14,6 +15,7 @@ import ThemeToggle from "../components/ThemeToggle.svelte";
       <slot />
       <ThemeToggle client:visible />
     </main>
+    <Background client:visible />
   </body>
 </html>
 

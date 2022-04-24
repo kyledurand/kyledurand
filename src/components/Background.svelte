@@ -18,6 +18,7 @@
     let node1End = Math.floor(Math.random() * width);
     let node2Start = Math.floor(Math.random() * height);
     let node2End = Math.floor(Math.random() * height);
+
     canvas.height = height;
     canvas.width = width;
     context.strokeStyle = styles.getPropertyValue("--background-stroke");
@@ -26,8 +27,10 @@
     // Line 1 start
     context.moveTo(node1Start, 0);
     context.lineTo(node1End, height);
+    // Line 2 start
     context.moveTo(0, node2Start);
     context.lineTo(width, node2End);
+
     context.stroke();
 
     if (prefersReducedMotion) return;
@@ -46,7 +49,6 @@
       node2Start = nodeDirections[2] ? node2Start - 1 : node2Start + 1;
       node2End = nodeDirections[3] ? node2End - 1 : node2End + 1;
 
-      // console.log(nodeDirections);
       context.clearRect(0, 0, width, height);
       context.save();
       context.beginPath();
@@ -104,10 +106,6 @@
 <canvas class="background" />
 
 <style>
-  :root {
-    margin: 0;
-  }
-
   canvas {
     position: absolute;
     top: 0;

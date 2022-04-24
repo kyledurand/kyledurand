@@ -11,15 +11,9 @@
     const width = window.innerWidth;
     const height = window.innerHeight;
 
-    let step = 0;
     let raf;
+    let step = 0;
     let nodeDirections = [false, false, true, true];
-    let nodes = [
-      {
-        x: Math.floor(Math.random() * width),
-        y: Math.floor(Math.random() * width),
-      },
-    ];
     let node1Start = Math.floor(Math.random() * width);
     let node1End = Math.floor(Math.random() * width);
     let node2Start = Math.floor(Math.random() * height);

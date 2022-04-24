@@ -7,8 +7,9 @@
 
   onMount(() => {
     let amount = 0;
-    const searchText = new URLSearchParams(window.location.search).get("text");
-    const bypass = new URLSearchParams(window.location.search).get("bypass");
+    const search = new URLSearchParams(window.location.search);
+    const searchText = search.get("text");
+    const bypass = search.get("bypass");
 
     descretion = bypass || false;
     text = searchText || placeholder;

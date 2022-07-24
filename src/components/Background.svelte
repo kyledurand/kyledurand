@@ -4,7 +4,7 @@
 
   onMount(() => {
     const styles = getComputedStyle(document.body);
-    const prefersReducedMotion = window.matchMedia(MOTION_QUERY).matches;
+    if (window.matchMedia(MOTION_QUERY).matches) return;
 
     const canvas = document.querySelector(".background");
     const context = canvas.getContext("2d");
@@ -33,8 +33,6 @@
 
     context.stroke();
 
-    if (prefersReducedMotion) return;
-
     const animation = setInterval(() => {
       raf = window.requestAnimationFrame(animate);
     }, 1000 / 60);
@@ -59,12 +57,9 @@
       context.stroke();
       context.restore();
 
-      // COORDS
-
+      // COORDINATES
       // IF GREATER THAN HALF OF SCREEN WIDTH MOVE LEFT
-
       // IF LESS, MOVE RIGHT
-
       // IF REACHES 0 OR WIDTH, START MOVING UP OR DOWN
 
       if (step >= 1000) {

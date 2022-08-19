@@ -1,6 +1,6 @@
-### Hey there 👋 🌝
+### Hi hi 👋 🌝
 
-🔭 I’m currently working on Polaris [@shopify](https://github.com/Shopify)
+🔭 I’m currently working on [Polaris](https://polaris.shopify.com/) [@shopify](https://github.com/Shopify)
 
 <!--
 - 🌱 I’m currently learning ...

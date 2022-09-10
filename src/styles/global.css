@@ -14,9 +14,12 @@
   --selection-background: orange;
 }
 
-html {
+html,
+body {
   min-height: 100%;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -25,8 +28,6 @@ body {
   background-color: var(--background);
   font-family: var(--font-body);
   font-size: 100%;
-  margin: 0;
-  padding: var(--space-4);
   transition: color var(--time-1) var(--ease-in-2),
     background-color var(--time-1) var(--ease-in-2);
 }

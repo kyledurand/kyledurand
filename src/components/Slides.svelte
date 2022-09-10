@@ -2,21 +2,22 @@
   import {onMount} from "svelte";
 
   onMount(() => {
-    document.addEventListener("mousemove", (event) => {
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
-      const mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
-      const mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
+    function followMouse(event) {
+      const {innerHeight, innerWidth} = window;
+      const mouseXpercentage = Math.round((event.pageX / innerWidth) * 100);
+      const mouseYpercentage = Math.round((event.pageY / innerHeight) * 100);
 
-      document
-        .querySelectorAll("section")
-        .forEach(
-          (node) =>
-            (node.style[
-              "background"
-            ] = `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, var(--gradient-start), var(--gradient-end))`)
-        );
-    });
+      const sections = document.querySelectorAll("section");
+      const style = `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, var(--gradient-start), var(--gradient-end))`;
+
+      sections.forEach((node) => (node.style.background = style));
+    }
+
+    document.addEventListener("mousemove", followMouse);
+
+    return () => {
+      document.removeEventListener("mousemove", followMouse);
+    };
   });
 </script>
 

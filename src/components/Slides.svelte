@@ -1,7 +1,7 @@
 <script>
   import {onMount} from "svelte";
 
-  const followMouse = (event) => {
+  const track = (event) => {
     const {innerHeight, innerWidth} = window;
     const mouseXpercentage = Math.round((event.pageX / innerWidth) * 100);
     const mouseYpercentage = Math.round((event.pageY / innerHeight) * 100);
@@ -13,10 +13,10 @@
   };
 
   onMount(() => {
-    document.addEventListener("mousemove", followMouse);
+    document.addEventListener("mousemove", track);
 
     return () => {
-      document.removeEventListener("mousemove", followMouse);
+      document.removeEventListener("mousemove", track);
     };
   });
 </script>

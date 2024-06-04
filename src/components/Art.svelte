@@ -1,5 +1,5 @@
 <script>
-  import {onMount} from "svelte";
+  import { onMount } from "svelte";
   const placeholder = "This is basically a free NFT";
   let shadow = "-5px 5px 0px white";
   let descretion = false;
@@ -30,6 +30,7 @@
     const width = window.innerWidth;
     const height = window.innerHeight;
 
+    let raf;
     let startX = 0;
     let startY = 0;
     let endX = width;
@@ -42,7 +43,7 @@
     const getNewX = () => Math.floor(Math.random() * width);
     const getNewY = () => Math.floor(Math.random() * height);
     const getColor = () => Math.floor(Math.random() * 255);
-    let raf;
+
     const animation = setInterval(() => {
       if (descretion === false) return;
       raf = window.requestAnimationFrame(animate);

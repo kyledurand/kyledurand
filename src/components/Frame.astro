@@ -16,22 +16,21 @@ import Background from "../components/Background.svelte";
       <ThemeToggle client:visible />
     </main>
     <Background client:visible />
+    <style>
+      body {
+        display: flex;
+        gap: var(--space-4);
+      }
+
+      main {
+        max-width: 60ch;
+        margin: 0 auto;
+      }
+
+      nav {
+        padding-top: 94px;
+        max-width: 300px;
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  body {
-    display: flex;
-    gap: var(--space-4);
-  }
-
-  main {
-    max-width: 60ch;
-    margin: 0 auto;
-  }
-
-  nav {
-    padding-top: 94px;
-    max-width: 300px;
-  }
-</style>
